@@ -62,20 +62,23 @@
     const Bcard = document.querySelector('#back')
 
     const touchstart = function () {
-      console.log('touchstart');
+      setTimeout(()=>{
       Fcard.classList.remove('front1')
       Bcard.classList.remove('back1')
       Fcard.classList.add('front-touched')
       Bcard.classList.add('back-touched')
 
+      },100)
+
     }
     const touchend = function () {
-      console.log('touchend');
       
+      setTimeout(()=>{
       Bcard.classList.remove('back-touched')
       Fcard.classList.remove('front-touched')
       Bcard.classList.add('back1')
       Fcard.classList.add('front1')
+      },100)
     }
     body.addEventListener('touchstart', touchstart)
     body.addEventListener('touchend', touchend)
