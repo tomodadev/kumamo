@@ -5,7 +5,10 @@
   "main": "index.html",
   "scripts": {
     "start": "serve",
-    "build": "echo This is a static template, there is no bundler or bundling involved!"
+    "build": "echo This is a static template, there is no bundler or bundling involved!",
+    "sass": "sass --watch main.scss ./style/compiled.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "repository": {
     "type": "git",
@@ -24,5 +27,8 @@
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
     "serve": "^11.2.0"
+  },
+  "dependencies": {
+    "sass": "^1.54.4"
   }
 }
