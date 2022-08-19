@@ -84,7 +84,7 @@ h1 {
   &:hover, &:focus &:active{
     >.front {
       transform: rotateY(180deg);
-      opacity: 0;
+      // opacity: 0;
     }
 
     >.back {
