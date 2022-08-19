@@ -53,37 +53,25 @@
   <div id="back" class="card back back1">
     <img src="./luckyback.jpeg" alt="luckydouble#702" style="width: 200px; height: 200px; align-items: center; margin-top: 200px; margin-left:50px; background: #ddd;" />
 
- 
   </div>
+  <button class="pressMe " onclick="togglebutton()">🍀</button>  
 
   <script>
     const body = document.querySelector('.flip');
     const Fcard = document.querySelector('#front')
     const Bcard = document.querySelector('#back')
 
-    const touchstart = function () {
-      setTimeout(()=>{
-      Fcard.classList.remove('front1')
-      Bcard.classList.remove('back1')
-      Fcard.classList.add('front-touched')
-      Bcard.classList.add('back-touched')
-
-      },300)
-
-    }
-    const touchend = function () {
+   
+    const togglebutton = function () {
       
-      setTimeout(()=>{
-      Bcard.classList.remove('back-touched')
-      Fcard.classList.remove('front-touched')
-      Bcard.classList.add('back1')
-      Fcard.classList.add('front1')
-      },300)
+      Bcard.classList.toggle('back-touched')
+      Fcard.classList.toggle('front-touched')
+      Bcard.classList.toggle('back1')
+      Fcard.classList.toggle('front1')
     }
-    body.addEventListener('touchstart', touchstart)
-    body.addEventListener('touchend', touchend)
-    // body.addEventListener('mouseover', touchstart)
-    // body.addEventListener('mouseout', touchstart)
+   
+    Fcard.addEventListener('click', togglebutton)
+    Bcard.addEventListener('click', togglebutton)
   </script>
 </body>
 
