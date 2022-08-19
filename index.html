@@ -19,7 +19,7 @@
 
 <body class="flip">
 
-  <div class="card front">
+  <div id="front" class="card front1 front">
     <img src="./lucky.jpeg" alt="luckydouble#702" style="width: 100%; height: 300px; background: #ddd;" />
 
     <div style="padding:16px;">
@@ -44,27 +44,44 @@
         <a href="https://opensea.io/collection/wigglewiggleclub"><i class="fa-solid fa-sailboat"></i></a>
         <a href="https://www.youtube.com/channel/UC2a9Y-PVx2V9WcXlqEBEGjQ"><i class="fa-brands fa-youtube"></i></i></a>
         </div>
-        <img src="./qwer.png" alt="qr" style="width: 80px; height:80px; border: 2px solid #000;" />
+        <img src="./qwer.png" alt="qr" style=" width: 80px; height:80px; border: 2px solid #000;" />
       </div>
 
       
     </div>
   </div>
-    <div class="card back">
+  <div id="back" class="card back back1">
     <img src="./luckyback.jpeg" alt="luckydouble#702" style="width: 200px; height: 200px; align-items: center; margin-top: 200px; margin-left:50px; background: #ddd;" />
 
  
   </div>
-  <!-- <script>
-    const body = document.querySelector('body');
-    body.addEventListener('touchstart', touched)
-    body.addEventListener('touchend', touched)
+
+  <script>
+    const body = document.querySelector('.flip');
+    const Fcard = document.querySelector('#front')
+    const Bcard = document.querySelector('#back')
+
     const touchstart = function () {
-      
-      const card = document.querySelector('.front')
-      card.classList.toggle('touched')
+      console.log('touchstart');
+      Fcard.classList.remove('front1')
+      Bcard.classList.remove('back1')
+      Fcard.classList.add('front-touched')
+      Bcard.classList.add('back-touched')
+
     }
-  </script> -->
+    const touchend = function () {
+      console.log('touchend');
+      
+      Bcard.classList.remove('back-touched')
+      Fcard.classList.remove('front-touched')
+      Bcard.classList.add('back1')
+      Fcard.classList.add('front1')
+    }
+    body.addEventListener('touchstart', touchstart)
+    body.addEventListener('touchend', touchend)
+    // body.addEventListener('mouseover', touchstart)
+    // body.addEventListener('mouseout', touchstart)
+  </script>
 </body>
 
 </html>
