@@ -54,12 +54,13 @@
     <img src="./luckyback.jpeg" alt="luckydouble#702" style="width: 200px; height: 200px; align-items: center; margin-top: 200px; margin-left:50px; background: #ddd;" />
 
   </div>
-  <button class="pressMe " onclick="togglebutton()">🍀</button>  
+  <button class="pressMe " >🍀</button>  
 
   <script>
     const body = document.querySelector('.flip');
     const Fcard = document.querySelector('#front')
     const Bcard = document.querySelector('#back')
+    const button = document.querySelector('.pressMe')
 
    
     const togglebutton = function () {
@@ -69,12 +70,13 @@
       Bcard.classList.toggle('back1')
       Fcard.classList.toggle('front1')
       setTimeout(()=>{
-window.location.href= "https://luckydouble.creatorlink.net/";
+        window.open("https://luckydouble.creatorlink.net/" , "_blank");
+  
       },800)
     }
    
-    Fcard.addEventListener('click', togglebutton)
-    Bcard.addEventListener('click', togglebutton)
+    button.addEventListener('click', togglebutton)
+    // Bcard.addEventListener('click', togglebutton)
   </script>
 </body>
 
