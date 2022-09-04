@@ -1,3 +1,5 @@
+// @import "compass/css3";
+
 body {
   display: flex;
   flex-direction: column;
@@ -82,6 +84,15 @@ h1 {
 .text-shadow {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.02), 16px 16px rgba(0, 0, 0, 0.04),  1.25rem 1.25rem rgba(0, 0, 0, 0.04);
 }
+
+// .text-shadow-test {
+//   // width: 600px;
+//   //   margin: 100px auto;
+//     @include transform(translateZ(0));
+//     @include text-shadow(3px 3px 0px rgba(196, 23, 83, 0.1));
+//     @include single-transition(text-shadow, 20ms);
+//     -webkit-text-stroke: 1px rgba(196, 23, 83, 0.5);
+// }
 .front-touched {
   transform: rotateY(180deg);
   // display: hidden;
